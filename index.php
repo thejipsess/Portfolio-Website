@@ -15,7 +15,7 @@
 		<button type="button" class="btn" id="showMore"><a href="PersonalInfo.php">Show more...</a></button>
 	</section>
 
-	<aside class="sideBar">
+	<aside class="sideBar" id="indexSideBar">
 		<h3>Links</h4>
 			<ul>
 				<li><a href="Portfolio.php#thesisContainer">

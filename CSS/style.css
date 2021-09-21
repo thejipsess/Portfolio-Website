@@ -96,17 +96,17 @@ img{
 	height: 120px;
 	position: relative;
 	margin-bottom: 0;
-	filter: drop-shadow(0 10px 5px black);
+	filter: drop-shadow(0 10px 5px #000000);
 	max-width: 1300px;
 	margin: 0 auto;
 }
 
 #diagonalUp{
-	filter: drop-shadow(0 -10px 5px black);
+	filter: drop-shadow(0 -10px 5px #000000);
 }
 
 #diagonalDown{
-	filter: drop-shadow(0 10px 5px black);
+	filter: drop-shadow(0 10px 5px #000000);
 }
 
 #thesisContainer{
@@ -191,7 +191,7 @@ img{
 }
 
 #MainHeader svg{
-	filter: drop-shadow(0 0 20px);
+	filter: drop-shadow(0 0 20px #000000);
 }
 
 #alertBar{
@@ -261,6 +261,7 @@ img{
 	background-color: #ED5C1D;
 	color: #fff;
 	width: 100%;
+	bottom: -130px;
 }
 
 #MainFooter p{
@@ -291,7 +292,7 @@ img{
 	width: 30%;
 	float: right;
 	top: 250px;
-	filter: drop-shadow(-12px 8px 10px);
+	filter: drop-shadow(-12px 8px 10px #000000);
 	color: black;
 	text-indent: -1em;
 	word-wrap: break-word;
@@ -300,7 +301,7 @@ img{
 
 #personalDetails::after{
 	content: "";
-	background: url("../IMg/abstractBG.png");
+	background: url("../IMG/abstractBG.png");
 	background-size: cover;
 	background-position: right;
 	opacity: 0.7;
@@ -475,6 +476,10 @@ img{
 	font-size: 75%;
 }
 
+#submit{
+	bottom: 15px;
+}
+
 #closeButton{
 	height: 16px;
 	width: 16px;
@@ -577,8 +582,8 @@ img{
 	display: grid;
 	grid-template-columns: 50% 50%;
 	background: radial-gradient(#7292AB, #223241);
-	filter: drop-shadow(0, 0, 5px);
-	-webkit-filter: drop-shadow(0, 0, 10px);
+	filter: drop-shadow(0, 0, 5px, #000000);
+	-webkit-filter: drop-shadow(0, 0, 10px, #000000);
 }
 
 .gridElement{
@@ -757,7 +762,7 @@ img{
 	margin: auto;
 	margin-bottom: 20px;
 	border: solid 2px black;
-    filter: drop-shadow(0 5px 5px black);
+    filter: drop-shadow(0 5px 5px #000000);
 }
 
 .sliderContainer{
@@ -1029,22 +1034,33 @@ img{
 		width: 100%;
 		float: none;
 		margin-top: 25px;
+		background: none;
+		text-align: center;
+	}
+
+	#indexSideBar{
+		border:none;
 	}
 
 	#PersonalInfo{
 		width: 100%;
-		position: center;
+		text-align: center;
 		margin: 0;
 		margin-bottom: 30px;
+		border: none;
+		padding-top: 40px;
 	}
 
 	#personalDetails{
-		width: 100%;
-		margin: 30px 0;
+		width: 90%;
+		margin: auto;
+		float: none;
+		text-align: left;
 	}
 
 	#contactInfo{
-		margin:0;
+		margin:auto;
+		margin-bottom: 50px;
 		padding: 0;
 		text-align: center;
 		max-width: 100%;
@@ -1062,12 +1078,24 @@ img{
 
 	.pfwScroller{
 		transform: none !important;
-		margin-top: -500px !important;
+		margin-top: -50px !important;
 	}
 
-	.modelingScroller{
-		margin-top: -1300px !important;
+
+	#story{
+		width: 80%;
+		position: relative;
 	}
+
+	#story p{
+		text-align: center;
+	}
+
+	#MainFooter{
+	top: 100%;
+	margin-top: -100%;
+	}
+
 }
 
 @media(max-width: 545px){ 

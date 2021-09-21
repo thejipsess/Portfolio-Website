@@ -28,7 +28,7 @@ $lang['linkedin'] =				"<span class=\"bold\">Linkedin:</span>		<a target='_blank
 $lang['github'] =				"<span class=\"bold\">Github:</span>		<a target='_blank' href='https://github.com/thejipsess'>https://github.com/thejipsess</a>";
 $lang['highschool degree'] =	"<span class=\"bold\">Highschool:</span>	pre-university education degree with a Science, Engineering and 							Health profile - Trevianum";
 $lang['university degree'] =	"<span class=\"bold\">University:</span>	degree of Bachelor of Science in Liberal Arts and Sciences - 								Maastricht Science Programme";
-$lang['languages'] =			"<span class=\"bold\">Languages:</span>		<ul><li>Dutch</li><li>English</li><li>French (not fluently)</li><li>German (not fluently)</li><li>Java</li><li>JavaScript</li><li>C#</li><li>HTML</li><li>																			CSS</li><li>PHP</li><li>MATLAB</li></ul>";
+$lang['languages'] =			"<span class=\"bold\">Languages:</span>		<ul><li>Dutch</li><li>English</li><li>French (not fluently)</li><li>German (not fluently)</li><li>Python</li><li>R</li><li>Java</li><li>JavaScript</li><li>C#</li><li>HTML</li><li>																			CSS</li><li>PHP</li><li>MATLAB</li></ul>";
 $lang['certificate'] =			"<span class=\"bold\">Certificate:</span>	Camebridge English Level 2 Certificate in ESOL International (								advanced)";
 $lang['software'] =				"<span class=\"bold\">Software:</span>		<ul><li>Autodeks 3ds max & Mudbox</li><li>Unity 3D</li><li>Adobe After Effects, Photoshop & Illustrator</li><li>Microsoft Visual																		Studio, Word, Powerpoint& Excel</li><li>MATLAB</li>";
 

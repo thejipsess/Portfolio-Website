@@ -35,56 +35,64 @@ $(document).ready(function()
 
 	// adjust abstract & pfwScroller scrolling speeed + pop up and -down container 2 when scrolling it. Additionaly, blur abstract and change container2 opacity.
 	$(window).scroll(function(){
-		if (window.outerWidth >= 1300) {
 			var scrollAmount = $(this).scrollTop();
 
 			$('#Abstract').css({
 				'transform' : 'translate(0px, ' + scrollAmount / -40 + '%)'
 			})
-		//console.log('height: ' + $(window).height());
-		//if ($(window).height() > 600) {
-			//console.log('scrolling');
-			$('.pfwScroller').css({
-				'transform' : 'translate(0px, ' + scrollAmount / -40 + '%)'
-			})
-		//}
-		
-		
-		if (scrollAmount > 220){
 
-			if (onScreen == false || onScreen == null ) {
+			if (window.outerWidth >= 1300) {
+				$('.pfwScroller').css({
+					'transform' : 'translate(0px, ' + scrollAmount / -40 + '%)'
+				})
+
+				//slide up the modelingScroller
+				if (scrollAmount >= 2800 && done == false) {
+					done = true;
+					$('.modelingScroller').animate({
+				
+			},500)
+				}
+			}
+
+
+			if (scrollAmount > 220){
+
+				if (onScreen == false || onScreen == null ) {
+					$('.container2').animate({
+						marginTop: '400px'
+					},300, function(){
+						$('.container2').stop()
+					}),
+					onScreen = true,
+					$('#Abstract').css({
+						'filter' : 'blur(1px)'
+					})
+					$('.container2').css({
+						'background-color' : 'rgb(30,30,30 , 0.5)'
+					})
+				} 
+			} 
+
+			else if(onScreen == true || onScreen == null){		
 				$('.container2').animate({
-					marginTop: '400px'
+					marginTop: '800px'
 				},300, function(){
 					$('.container2').stop()
 				}),
-				onScreen = true,
+				onScreen = false,
 				$('#Abstract').css({
-					'filter' : 'blur(1px)'
+					'filter' : 'blur(0)'
 				})
 				$('.container2').css({
-					'background-color' : 'rgb(30,30,30 , 0.5)'
+					'background-color' : 'rgb(164, 59, 14, 0)'
 				})
-			} 
-		} 
-
-		else if(onScreen == true || onScreen == null){		
-			$('.container2').animate({
-				marginTop: '800px'
-			},300, function(){
-				$('.container2').stop()
-			}),
-			onScreen = false,
-			$('#Abstract').css({
-				'filter' : 'blur(0)'
-			})
-			$('.container2').css({
-				'background-color' : 'rgb(164, 59, 14, 0)'
-			})
-		}
+			}
 
 		//change top-radius based on the amount  scrolled for container2
-		if(scrollAmount > 245 && scrollAmount <= 345){
+		console.log('outer width: ' + window.outerWidth);
+		
+			if(scrollAmount > 245 && scrollAmount <= 345){
 			//var s2Rad = -(30-(scrollAmount - 245)) * 10/30;
 			var s2Rad = (-15/50)*(scrollAmount-245) + 30;
 			//console.log('rad = ' + s2Rad);
@@ -99,18 +107,7 @@ $(document).ready(function()
 			})
 		}
 
-		//slide up the modelingScroller
-		if (scrollAmount >= 2800 && done == false) {
-			done = true;
-			$('.modelingScroller').animate({
-				//'top': '-500px'
-			},500)
-		}
-	}
-	
 
-	
-	
 })
 
 	var div1Height = $('#thesisContainer').height();

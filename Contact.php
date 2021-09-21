@@ -23,7 +23,7 @@ if (filter_has_var(INPUT_POST, 'submit'))
 		if (filter_var($email, FILTER_VALIDATE_EMAIL) === false ) 
 		{
 			ChromePhp::log('email is false');
-			$msg = 'The email you entered seems to be invalid';
+			$msg = 'The email you entered seems to be invalid.';
 			$submit = true;
 		} else 
 		{
@@ -33,18 +33,20 @@ if (filter_has_var(INPUT_POST, 'submit'))
 
 			//SETUP WHEN SERVER IS ONLINE
 			//send message to personal email
-			$toEmail = 'jipdekok@hotmail.com';
-			$subject = 'Contact request from '.$name;
-			$body = '<h1>Contact Request</h1>
-			<h3>Name: </h3><p>'.$name.'</p>
-			<h3>Email: </h3><p>'.$email.'</p>
-			<h3>Message: </h3><p>'.$message.'</p>';
+			$toEmail = "jipdekok@hotmail.com";
+			$fromEmail = "webmaster@scoutingstsalvius.nl"; 
+            $subject = "Contact request from " . $name;
+			$body = "<h1>Contact Request</h1>";
+			$body .="<h3>Name: </h3><p>" . $name ."</p>"; 
+			$body .="<h3>Email: </h3><p>" . $email . "</p>";
+			$body .="<h3>Message: </h3><p>" . $message . "</p>";
 			//Email header
-			$headers = "NIME-Version: 1.0" ."/r/n";
-			$headers .= "Content-Type:text/html;charset=UTF-8" . "/r/n";
+			$headers = "MIME-Version: 1.0\r\n";
+			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 			//additional headers
-			$headers .= "From: " .$name. "<".$email.">". "/r/n";
+            $headers .= "From: $fromEmail\r\n";
+            $headers .= "Reply-to: $email";
 
 			if(mail($toEmail, $subject, $body, $headers))
 			{
