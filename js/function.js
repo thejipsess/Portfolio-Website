@@ -56,15 +56,15 @@ $(document).ready(function()
 			}
 
 
-			if (scrollAmount > 220){
+			if (scrollAmount >= 220){
 
 				if (onScreen == false || onScreen == null ) {
-					$('.container2').animate({
-						marginTop: '400px'
-					},300, function(){
-						$('.container2').stop()
-					}),
-					onScreen = true,
+					// $('.container2').animate({
+					// 	marginTop: '400px'
+					// },300, function(){
+					// 	$('.container2').stop()
+					// }),
+					// onScreen = true,
 					$('#Abstract').css({
 						'filter' : 'blur(1px)'
 					})
@@ -72,8 +72,7 @@ $(document).ready(function()
 						'background-color' : 'rgb(30,30,30 , 0.5)'
 					})
 				} 
-			} 
-
+			}
 			else if(onScreen == true || onScreen == null){		
 				$('.container2').animate({
 					marginTop: '800px'
@@ -87,7 +86,11 @@ $(document).ready(function()
 				$('.container2').css({
 					'background-color' : 'rgb(164, 59, 14, 0)'
 				})
-			}
+			} else {
+				$('#Abstract').css({
+						'filter' : 'blur(0px)'
+					})
+				} 
 
 		//change top-radius based on the amount  scrolled for container2
 		console.log('outer width: ' + window.outerWidth);
@@ -111,13 +114,13 @@ $(document).ready(function()
 })
 
 	var div1Height = $('#thesisContainer').height();
-	$('.pfwScroller').css('margin-top', parseInt(div1Height - 1100));
+	$('.pfwScroller').css('margin-top', parseInt(div1Height + 500));
 
 	if ($('.pfwScroller').length > 0){
 		window.setInterval(function(){
 			if (div1Height != $('#thesisContainer').height()) {
 				div1Height = $('#thesisContainer').height();
-			$('.pfwScroller').css('margin-top', parseInt(div1Height - 900)); //set pfwScroller margin based on size of the div above it so it is always close enough and not overlapping.
+			$('.pfwScroller').css('margin-top', parseInt(div1Height - 1200)); //set pfwScroller margin based on size of the div above it so it is always close enough and not overlapping.
 		}
 		/*if (div2Height != $('.pfwScroller').position().top + $('.pfwScroller').height()) {
 			var div2Height = $('.pfwScroller').height() - 2700;

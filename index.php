@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
 
+<title> Portfolio website Jip de Kok </title>
+<link rel="shortcut icon" type="image/png" href="IMG/favicon.png"/>
 
 <section id="Abstract">
 	<div class="container">
@@ -18,9 +20,9 @@
 	<aside class="sideBar" id="indexSideBar">
 		<h3>Links</h4>
 			<ul>
-				<li><a href="Portfolio.php#thesisContainer">
-					<h4>Bachelor Thesis</h3>
-						<img src="IMG/BTRthumbnail.png" alt="Bachelor Thesis Thumbnail">
+				<li><a href="Portfolio.php#center">
+					<h4>Thesis</h3>
+						<img src="IMG/BTRthumbnail.png" alt="Thesis Thumbnail">
 					</a>
 				</li>
 
@@ -39,12 +41,6 @@
 				<li><a href="Portfolio.php#logoContainer">
 					<h4>Logo Design</h3>
 						<img src="IMG/LOGOthumbnail.jpg" alt="Coming soon!">
-					</a>
-				</li>
-
-				<li><a onclick="openAlertBar('Unfortunately this section of the website is not yet included.', 'warning')">
-					<h4>SoftwareDevelopment</h3>
-						<img src="IMG/SWDthumbnail.png" alt="Coming soon!">
 					</a>
 				</li>
 			</ul>

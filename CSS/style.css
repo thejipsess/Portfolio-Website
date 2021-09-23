@@ -9,7 +9,7 @@ body{
 	background-color: #333;
 	color: #555;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.6em;
 	margin: 0;
 	padding: 0;
@@ -31,6 +31,8 @@ img{
 	width: 100% !important;
 	text-align: center;
 	z-index: -100;
+	overflow: hidden;
+	height: 8500px;
 }
 
 .container{
@@ -68,6 +70,22 @@ img{
 	max-width: 1300px;
 	z-index: 0;
 }
+
+.bachelorThesisScroller{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	padding-top: 50px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	top: 132px;
+	background-color: rgb(30,30,30);
+	max-width: 1300px;
+	z-index: 0;
+	padding-bottom: 500px;
+}
+
 
 .inContainer3{
 	width: 80%;
@@ -110,8 +128,13 @@ img{
 }
 
 #thesisContainer{
-	padding-bottom: 700px;
+	margin-bottom: -10px;
 }
+
+#thesisGraph{
+		text-align: left;
+		font-style: italic;
+	}
 
 #thesisBtn{
 	height: 50px;
@@ -135,7 +158,7 @@ img{
 .modelingScroller{
 	position: relative;
 	bottom: 0;
-	margin-top: -3600px;
+	top: -5300px;
 	z-index: -1;
 }
 
@@ -144,6 +167,13 @@ img{
 }
 
 #modelingGradient{
+	margin: auto;
+	position: relative;
+	top: 120px;
+	max-width: 1300px;
+}
+
+#logoGradient{
 	margin: auto;
 	position: relative;
 	top: 120px;
@@ -243,6 +273,7 @@ img{
 	background-color: #333;
 	background-position: 63% -80px;
 	background-repeat: no-repeat;
+	background-size: cover;
 	min-height: 300px;
 	margin-bottom: 0;
 	transform-origin: top left;
@@ -297,6 +328,8 @@ img{
 	text-indent: -1em;
 	word-wrap: break-word;
 	display: none;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 #personalDetails::after{
@@ -532,6 +565,7 @@ img{
 	position: relative;
 	width: 160px;
 	left: 10px;
+	font-weight: bold;
 }
 
 .formItem{
@@ -566,6 +600,8 @@ img{
     margin-left: 10%;
     margin-bottom: 10%;
     color: #fff;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    text-align: left;
 }
 
 #story p{
@@ -849,10 +885,10 @@ img{
 
 #logoContainer{
 	width: 100%;
-	top: 90px;
+	top: -5300px;
 	text-align: center;
 	max-width: 1300px;
-	
+	overflow: visible;
 }
 
 .logoContentContainer{
@@ -860,7 +896,8 @@ img{
 	margin: auto;
 	height: 100px;
 	background: rgb(30,30,30);
-	height: 1000px;
+	height: 1200px;
+	padding-top: 20px;
 }
 
 .logoText{
@@ -1030,6 +1067,53 @@ img{
 }
 
 @media(max-width: 600px){
+	
+
+}
+
+@media(max-width: 545px){ 
+	
+}
+
+@media(max-width: 830px){
+	
+	
+}
+
+@media(max-width: 1300px){
+	.center{
+		height: auto;
+	}
+	#thesisContainer{
+		padding-bottom: 200px;
+	}
+
+	.bachelorThesisScroller{
+		position: relative;
+	}
+
+	.pfwScroller{
+		position: relative;
+		margin-top: -200px !important
+	}
+
+	.modelingScroller{
+		margin-top: -300px;
+		top: 0px !important;
+	}
+
+	#modelingContainer{
+		padding-top: 200px;
+	}
+
+	.logoContentContainer{
+		height: 1200px;
+	}
+
+	.turntableBtnContainer{
+		height: 100px;
+	}
+
 	.sideBar{
 		width: 100%;
 		float: none;
@@ -1056,6 +1140,7 @@ img{
 		margin: auto;
 		float: none;
 		text-align: left;
+		font-size: 16;
 	}
 
 	#contactInfo{
@@ -1076,6 +1161,12 @@ img{
 		height: 70%;
 	}
 
+
+	.bachelorThesisScroller{
+		transform: none !important;
+		margin-top: -50px !important;
+	}
+
 	.pfwScroller{
 		transform: none !important;
 		margin-top: -50px !important;
@@ -1093,36 +1184,14 @@ img{
 
 	#MainFooter{
 	top: 100%;
-	margin-top: -100%;
+	margin-top: -75%;
 	}
 
-}
-
-@media(max-width: 545px){ 
-	.turntableBtnContainer{
-		height: 100px;
-	}
-}
-
-@media(max-width: 830px){
-	.logoContentContainer{
-		height: 1000px;
-	}
-}
-
-@media(max-width: 1300px){
-	#thesisContainer{
+	#logoContainer{
+		top: -100px !important;
+		overflow: visible;
 		padding-bottom: 200px;
 	}
-	.pfwScroller{
-		position: relative;
-	}
 
-	.modelingScroller{
-		margin-top: -320px;
-	}
 
-	#modelingContainer{
-		padding-top: 200px;
-	}
 }

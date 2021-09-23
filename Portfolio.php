@@ -2,6 +2,18 @@
 
 <div class="center">
 	<div class="container3" id="thesisContainer">
+		<h2 class="inContainer3"><?php echo $lang['master thesis title']; ?></h2>
+		<br>
+		<p class="inContainer3"><?php echo $lang['master thesis text']; ?></p>
+
+		<br>
+		<section class="imageContainer">
+			<img src="IMG/spider chart example.svg", style="width: 80%">
+			<p class="inContainer3" id="thesisGraph"> <?php echo $lang['master thesis graph description']; ?></p>
+			</section>
+		</div>
+
+	<div class="bachelorThesisScroller">
 		<h2 class="inContainer3"><?php echo $lang['thesis title']; ?></h2>
 		<br>
 		<p class="inContainer3"><?php echo $lang['thesis text']; ?></p>
@@ -92,112 +104,107 @@
 				<p class="inContainer3"><?php echo $lang['modeling text']; ?></p>
 				<br>
 			</div>
-		</div>
-		<svg id='modelingGradient' width=100% height=200px viewBox= "0 0 100 100" preserveAspectRatio = "none">
-			<defs>
-				<linearGradient id="grad1" x1="0%" y1="15%" x2= 0% y2="80%">
-					<stop offset="15%" style="stop-color:rgb(30,30,30);stop-opacity:1" />
-					<stop offset="80%" style="stop-color:rgb(30,30,30);stop-opacity:0" />
-				</linearGradient>
-			</defs>
-			<rect fill="url(#grad1)" width="100%" height="100%"/>
-		</svg>
-	</div>
+		
+				<svg id='modelingGradient' width=100% height=200px viewBox= "0 0 100 100" preserveAspectRatio = "none">
+					<defs>
+						<linearGradient id="grad1" x1="0%" y1="15%" x2= 0% y2="80%">
+							<stop offset="15%" style="stop-color:rgb(30,30,30);stop-opacity:1" />
+							<stop offset="80%" style="stop-color:rgb(30,30,30);stop-opacity:0" />
+						</linearGradient>
+					</defs>
+					<rect fill="url(#grad1)" width="100%" height="100%"/>
+				</svg>
+			
 
-</div>
-<div class="turntableContainer">
-	<ul class="turntableBtnContainer">
-		<li>
-			<button class="turntableBtn" id="loopBtn" onclick="loopTurntable()">Auto Rotate</button>
-		</li>
-		<li>
-			<button class="turntableBtn" onclick="changeModel('Thraw')">Dragon</button>
-		</li>
-		<li>
-			<button class="turntableBtn" onclick="changeModel('Fairy')">Human</button>
-		</li>
-		<li>
-			<button class="turntableBtn" onclick="changeModel('Mosasaur', true)">Mosasaur</button>
-		</li>
-		<li>
-			<button class="turntableBtn" id="bgBtn" onclick="openBgMenu()">set BG</button>
-			<div class="dropdownContent">
-				<ul>
-					<li class="dropdownItem">
-						<img src="IMG/headerBG.jpg" onclick="bgChange('../IMG/headerBG.jpg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/abstractBG.png" onclick="bgChange('../IMG/abstractBG.png')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/abstractBG.jpg" onclick="bgChange('../IMG/abstractBG.jpg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/empty room 2.jpeg" onclick="bgChange('../IMG/empty room 2.jpeg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/empty room.jpg" onclick="bgChange('../IMG/empty room.jpg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/horizontal stripes.jpg" onclick="bgChange('../IMG/horizontal stripes.jpg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/showcase bg.png" onclick="bgChange('../IMG/showcase bg.png')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/void.jpg" onclick="bgChange('../IMG/void.jpg')">
-					</li>
-					<li class="dropdownItem">
-						<img src="IMG/underwater BG.png" onclick="bgChange('../IMG/underwater BG.png')">
-					</li>
-				</ul>
-			</div>
-		</li>
-		<li>
-			<svg class="turntableBtn" x="0px" y="0px" viewBox="0 0 1280 800" id="turntableFullscreenBtn" onclick="toggleFullscreenTurntable()">
-				<g>
-					<g>
+		
+		<div class="turntableContainer">
+			<ul class="turntableBtnContainer">
+				<li>
+					<button class="turntableBtn" id="loopBtn" onclick="loopTurntable()">Auto Rotate</button>
+				</li>
+				<li>
+					<button class="turntableBtn" onclick="changeModel('Thraw')">Dragon</button>
+				</li>
+				<li>
+					<button class="turntableBtn" onclick="changeModel('Fairy')">Human</button>
+				</li>
+				<li>
+					<button class="turntableBtn" onclick="changeModel('Mosasaur', true)">Mosasaur</button>
+				</li>
+				<li>
+					<button class="turntableBtn" id="bgBtn" onclick="openBgMenu()">set BG</button>
+					<div class="dropdownContent">
+						<ul>
+							<li class="dropdownItem">
+								<img src="IMG/headerBG.jpg" onclick="bgChange('../IMG/headerBG.jpg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/abstractBG.png" onclick="bgChange('../IMG/abstractBG.png')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/abstractBG.jpg" onclick="bgChange('../IMG/abstractBG.jpg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/empty room 2.jpeg" onclick="bgChange('../IMG/empty room 2.jpeg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/empty room.jpg" onclick="bgChange('../IMG/empty room.jpg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/horizontal stripes.jpg" onclick="bgChange('../IMG/horizontal stripes.jpg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/showcase bg.png" onclick="bgChange('../IMG/showcase bg.png')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/void.jpg" onclick="bgChange('../IMG/void.jpg')">
+							</li>
+							<li class="dropdownItem">
+								<img src="IMG/underwater BG.png" onclick="bgChange('../IMG/underwater BG.png')">
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<svg class="turntableBtn" x="0px" y="0px" viewBox="0 0 1280 800" id="turntableFullscreenBtn" onclick="toggleFullscreenTurntable()">
 						<g>
-							<polygon id="XMLID_61_" class="st0" points="457.5,330.5 457.5,217.5 570.5,217.5 570.5,126 366,126 366,330.5 			"/>
-							<polygon id="XMLID_60_" class="st0" points="709.5,217.5 822.5,217.5 822.5,330.5 914,330.5 914,126 709.5,126 			"/>
-							<polygon id="XMLID_59_" class="st0" points="822.5,469.5 822.5,582.5 709.5,582.5 709.5,674 914,674 914,469.5 			"/>
-							<polygon id="XMLID_58_" class="st0" points="570.5,582.5 457.5,582.5 457.5,469.5 366,469.5 366,674 570.5,674 			"/>
+							<g>
+								<g>
+									<polygon id="XMLID_61_" class="st0" points="457.5,330.5 457.5,217.5 570.5,217.5 570.5,126 366,126 366,330.5 			"/>
+									<polygon id="XMLID_60_" class="st0" points="709.5,217.5 822.5,217.5 822.5,330.5 914,330.5 914,126 709.5,126 			"/>
+									<polygon id="XMLID_59_" class="st0" points="822.5,469.5 822.5,582.5 709.5,582.5 709.5,674 914,674 914,469.5 			"/>
+									<polygon id="XMLID_58_" class="st0" points="570.5,582.5 457.5,582.5 457.5,469.5 366,469.5 366,674 570.5,674 			"/>
+								</g>
+							</g>
 						</g>
-					</g>
-				</g>
-			</svg>
-		</li>
+					</svg>
+				</li>
 
-	</ul>
-	<img class="turntableImg" src="IMG/turntable/Thraw/turntable (12).png">
-	<div class="progressBarContainer">
-		<div class="progressBar">
+			</ul>
+			<img class="turntableImg" src="IMG/turntable/Thraw/turntable (12).png">
+			<div class="progressBarContainer">
+				<div class="progressBar">
+				</div>
+			</div>
+			<div class="sliderContainer">
+				<input type="range" min="0" max="59" value="12" class="slider" id="turntableSlider">
+			</div>
 		</div>
-	</div>
-	<div class="sliderContainer">
-		<input type="range" min="0" max="59" value="12" class="slider" id="turntableSlider">
-	</div>
-</div>
 
-</div>
+		</div>
 
-<div class="center">
-	<svg id='modelingGradient' width=100% height=200px viewBox= "0 0 100 100" preserveAspectRatio = "none">
-		<defs>
-			<linearGradient id="grad2" x1="0%" y1="15%" x2= 0% y2="80%">
-				<stop offset="15%" style="stop-color:rgb(30,30,30);stop-opacity:0" />
-				<stop offset="80%" style="stop-color:rgb(30,30,30);stop-opacity:1" />
-			</linearGradient>
-		</defs>
-		<rect fill="url(#grad2)" width="100%" height="100%"/>
-	</svg>
-</div>
-
-<div class="container" id="logoContainer">
+			<svg id='modelingGradient' width=100% height=200px viewBox= "0 0 100 100" preserveAspectRatio = "none">
+				<defs>
+					<linearGradient id="grad2" x1="0%" y1="15%" x2= 0% y2="80%">
+						<stop offset="15%" style="stop-color:rgb(30,30,30);stop-opacity:0" />
+						<stop offset="80%" style="stop-color:rgb(30,30,30);stop-opacity:1" />
+					</linearGradient>
+				</defs>
+			</svg>
+				<div class="container" id="logoContainer">
 	
-
 	<div class="logoContentContainer">
-
+		
 		<h2> <?php echo $lang['logo title']; ?></h2>
 		<p class="logoText"><?php echo $lang['logo text']; ?></p>
 
@@ -254,6 +261,10 @@
 
 
 
+		</div>
+	</div>
+</div>
+
 
 <?php include 'footer.php'; ?>
 
@@ -265,7 +276,7 @@
 		$('#showcaseInfo').css('display' , 'block');
 		if (marginEditted == false) {
 			if (window.outerWidth >= 1300) {
-				$('.modelingScroller').css('margin-top' , -4116);
+				$('.modelingScroller').css('margin-top' , -250);
 			}
 			$('#gridShowcase').css('background' , 'radial-gradient(rgb(114,146,171),rgb(34,50,65))');
 			marginEditted = true;
