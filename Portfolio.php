@@ -330,12 +330,13 @@
 			$('.turntableContainer').attr('class', 'turntableContainerFullscreen');
 			$('.turntableBtnContainer').attr('class', 'turntableBtnContainerFullscreen');
 			$('.turntableImg').attr('class', 'turntableImgFullscreen');
-
+			$('.modelingScroller').attr('class', 'modelingScrollerFullscreen');
 			turntableFullscreenStatus = true;
 		} else {
 			$('.turntableContainerFullscreen').attr('class', 'turntableContainer');
 			$('.turntableBtnContainerFullscreen').attr('class', 'turntableBtnContainer');
 			$('.turntableImgFullscreen').attr('class', 'turntableImg');
+			$('.modelingScrollerFullscreen').attr('class', 'modelingScroller');
 			turntableFullscreenStatus = false;
 		}
 	}

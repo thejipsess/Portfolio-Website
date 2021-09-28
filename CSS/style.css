@@ -151,7 +151,8 @@ img{
 }
 
 .pfwScroller{
-	z-index: 1;
+	position: relative;
+	z-index: 2;
 	margin-top: 300px;
 }
 
@@ -159,7 +160,14 @@ img{
 	position: relative;
 	bottom: 0;
 	top: -5300px;
-	z-index: -1;
+	z-index: 1;
+}
+
+.modelingScrollerFullscreen{
+	position: relative;
+	bottom: 0;
+	top: -5300px;
+	z-index: 1000;
 }
 
 #modelingContainer{
@@ -670,20 +678,21 @@ img{
 	padding: 0;
 	opacity: 0;
 	transition: 0.5s;
+	z-index: 1;
 }
 
 .turntableBtnContainerFullscreen{
 	list-style: none;
-	height: 50px;
-	background-color: #D2691E;
-	text-align: center;
-	border-radius: 10px;
-	margin: auto;
-	position: relative;
-	display: block;
-	padding: 0;
-	opacity: 1;
-	transition: 0.5s;
+height: 50px;
+background-color: #D2691E;
+text-align: center;
+border-radius: 10px;
+margin: auto;
+position: relative;
+display: block;
+padding: 0;
+opacity: 1;
+transition: 0.5s;
 }
 
 .turntableBtnContainer li, .turntableBtnContainerFullscreen li{
@@ -949,6 +958,7 @@ img{
 	position: absolute;
 	height: 28.125vh;
     margin: 14.0625vh 0;
+    
 }
 
 #nextBtn{
@@ -965,6 +975,7 @@ img{
     opacity: 0.8;
     height: 28.125vh;
     margin: 14.0625vh 0;
+    top: 20%;
 }
 
 #previousBtn{
@@ -981,6 +992,7 @@ img{
     opacity: 0.8;
     height: 28.125vh;
     margin: 14.0625vh 0;
+    top: 20%;
 }
 
 .slideshow{
